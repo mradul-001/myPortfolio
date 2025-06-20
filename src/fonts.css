@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Oddlini';
+  src: url('/fonts/oddlini-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oddlini';
+  src: url('/fonts/oddlini-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
