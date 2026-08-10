@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import resume from "../assets/resume.pdf";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -32,41 +33,49 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between md:px-48 px-8 md:py-6 py-6 items-center text-white">
+      <nav className="sticky top-0 z-40 flex justify-between md:px-48 px-8 md:py-5 py-5 items-center text-ink backdrop-blur-md bg-base/80 border-b border-border">
         <div className="logo">
           <Link
             to="/"
-            className="font-extrabold font-audiowide md:text-[36px] text-[24px]"
+            className="font-semibold font-marcellus md:text-[30px] text-[22px] tracking-wide"
           >
             MS
           </Link>
         </div>
-        <div className="hidden links md:flex md:space-x-8 flex-col md:flex-row font-oddlini text-lg cursor-pointer">
-          <Link to="/projects">Projects</Link>
-          <a onClick={handleDownload}>Resume</a>
+        <div className="hidden links md:flex md:space-x-8 flex-col md:flex-row items-center font-oddlini text-base tracking-wide text-muted">
+          <Link to="/projects" className="hover:text-accent transition-colors duration-200">
+            Projects
+          </Link>
+          <a onClick={handleDownload} className="cursor-pointer hover:text-accent transition-colors duration-200">
+            Resume
+          </a>
+          <ThemeToggle />
         </div>
-        <div
-          className="menuicon text-xl cursor-pointer md:hidden"
-          onClick={handleNav}
-        >
-          <RxHamburgerMenu />
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <div
+            className="menuicon text-xl cursor-pointer text-ink"
+            onClick={handleNav}
+          >
+            <RxHamburgerMenu />
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         <div
-          className={`mobilenav fixed h-screen w-full top-0 bg-gray-800 p-10 
-                        ${nav ? "right-0" : "-right-full"} 
-                        transition-all duration-300 ease-in-out z-50`}
+          className={`mobilenav fixed h-screen w-full top-0 right-0 bg-base p-10
+                        ${nav ? "translate-x-0" : "translate-x-full"}
+                        transition-transform duration-300 ease-in-out z-50`}
         >
           <div className="flex justify-end">
             <div
-              className="closeicon text-xl cursor-pointer"
+              className="closeicon text-xl cursor-pointer text-ink"
               onClick={handleNav}
             >
               <IoMdClose />
             </div>
           </div>
-          <div className="flex flex-col space-y-8 mt-16 items-center ">
+          <div className="flex flex-col space-y-8 mt-16 items-center text-ink">
             <Link
               to="/projects"
               className="font-oddlini"
@@ -74,7 +83,7 @@ const Navbar = () => {
             >
               Projects
             </Link>
-            <a className="font-oddlini" onClick={combine}>
+            <a className="font-oddlini cursor-pointer" onClick={combine}>
               Resume
             </a>
           </div>

@@ -4,21 +4,21 @@ import reactimg from "../assets/react.png";
 function Footer() {
   return (
     <>
-      <footer class="text-gray-400">
+      <footer class="text-muted border-t border-border">
         <div class="md:px-48 px-8 md:py-12 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <div className="logo">
             <Link
               to="/"
-              className="font-extrabold font-audiowide md:text-[32px] text-[24px]"
+              className="font-semibold font-marcellus md:text-[26px] text-[20px] text-ink"
             >
               MS
             </Link>
           </div>
-          <p class="font-oddlini text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+          <p class="font-oddlini text-sm text-muted sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-border sm:py-2 sm:mt-0 mt-4">
             © 2025 Mradul Sonkar
           </p>
           <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center items-center sm:justify-start">
-            <a href="mailto:sonkarmradul@gmail.com" class="ml-3">
+            <a href="mailto:sonkarmradul@gmail.com" class="ml-3 hover:text-accent transition-colors duration-200">
               <img
                 width="26"
                 height="50"
@@ -27,7 +27,7 @@ function Footer() {
               />
             </a>
 
-            <a href="https://github.com/mradul-001" class="ml-3 text-gray-400">
+            <a href="https://github.com/mradul-001" class="ml-3 text-muted hover:text-accent transition-colors duration-200">
               <svg
                 fill="currentColor"
                 stroke="currentColor"
@@ -45,13 +45,13 @@ function Footer() {
             </a>
             <a
               href="https://www.linkedin.com/in/mr4du1/"
-              class="ml-3 text-gray-400"
+              class="ml-3 text-muted hover:text-accent transition-colors duration-200"
             >
               <img width="22" height="50" src="assets/l.png" alt="linkedin" />
             </a>
             <a
               href="https://www.instagram.com/mr4du1_/"
-              class="ml-3 text-gray-400"
+              class="ml-3 text-muted hover:text-accent transition-colors duration-200"
             >
               <svg
                 fill="none"

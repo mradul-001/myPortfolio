@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-base: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-surface-alt: #efe9dc;
+  --color-ink: #211f1a;
+  --color-muted: #6f6a5e;
+  --color-accent: #a8562f;
+  --color-border: #e3ddcd;
+}
+
+.dark {
+  --color-base: #131210;
+  --color-surface: #1c1a16;
+  --color-surface-alt: #242019;
+  --color-ink: #f2ede2;
+  --color-muted: #a29b8a;
+  --color-accent: #e08a5b;
+  --color-border: #332e25;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-image: radial-gradient(
+    circle at 15% 0%,
+    rgba(168, 86, 47, 0.06),
+    transparent 45%
+  );
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+@keyframes draw-bracket {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

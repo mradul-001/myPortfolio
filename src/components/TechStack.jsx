@@ -44,19 +44,19 @@ const utilitiesPlatforms = [
 export default function TechStack() {
   return (
     <div className="mx-auto md:px-48 px-8 md:py-12 py-8 w-full">
-      <h2 className="text-white mb-4 md:text-3xl text-xl font-bold font-oddlini">
+      <h2 className="text-ink mb-6 md:text-3xl text-xl font-marcellus">
         Skills
       </h2>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:gap-6">
         <div className="w-full md:w-1/3 mb-8">
-          <h1 className="w-full text-white md:text-lg font-oddlini mb-2">
+          <h1 className="w-full text-ink md:text-lg font-oddlini mb-2 tracking-wide">
             Programming Languages
           </h1>
-          <div className="flex flex-col text-gray-400">
+          <div className="flex flex-col text-muted">
             {programmingLanguages.map((ele, idx) => (
               <p
                 key={idx}
-                className="hover:bg-[rgba(39,39,43,.5)] px-2 py-1 font-zain text-xl flex items-center gap-2 rounded cursor-pointer"
+                className="hover:bg-surfacealt px-2 py-1 font-zain text-xl flex items-center gap-2 rounded cursor-pointer transition-colors duration-150"
               >
                 <img src={ele.icon} alt={ele.name} className="w-5 h-5" />
                 {ele.name}
@@ -66,14 +66,14 @@ export default function TechStack() {
         </div>
 
         <div className="w-full md:w-1/3 mb-8">
-          <h1 className="w-full text-white md:text-lg font-oddlini mb-2">
+          <h1 className="w-full text-ink md:text-lg font-oddlini mb-2 tracking-wide">
             Frameworks / Libraries
           </h1>
-          <div className="flex flex-col text-gray-400">
+          <div className="flex flex-col text-muted">
             {frameworksLibrariesTools.map((ele, idx) => (
               <p
                 key={idx}
-                className="hover:bg-[rgba(39,39,43,.5)] px-2 py-1 font-zain text-xl flex items-center gap-2 rounded cursor-pointer"
+                className="hover:bg-surfacealt px-2 py-1 font-zain text-xl flex items-center gap-2 rounded cursor-pointer transition-colors duration-150"
               >
                 <img src={ele.icon} alt={ele.name} className="w-5 h-5" />
                 {ele.name}
@@ -83,14 +83,14 @@ export default function TechStack() {
         </div>
 
         <div className="w-full md:w-1/3 mb-8">
-          <h1 className="w-full text-white md:text-lg font-oddlini mb-2">
+          <h1 className="w-full text-ink md:text-lg font-oddlini mb-2 tracking-wide">
             Utilities / Platforms
           </h1>
-          <div className="flex flex-col text-gray-400">
+          <div className="flex flex-col text-muted">
             {utilitiesPlatforms.map((ele, idx) => (
               <p
                 key={idx}
-                className="hover:bg-[rgba(39,39,43,.5)] px-2 py-1 font-zain text-xl flex items-center gap-2 rounded cursor-pointer"
+                className="hover:bg-surfacealt px-2 py-1 font-zain text-xl flex items-center gap-2 rounded cursor-pointer transition-colors duration-150"
               >
                 <img src={ele.icon} alt={ele.name} className="w-5 h-5" />
                 {ele.name}
