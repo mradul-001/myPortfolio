@@ -33,13 +33,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mradul Sonkar | Software Developer</title>
-    <style>
-      body {
-        background: rgb(22, 22, 22);
-      }
-    </style>
-    <script type="module" crossorigin src="/myPortfolio/assets/index-lHuxagha.js"></script>
-    <link rel="stylesheet" crossorigin href="/myPortfolio/assets/index-B4o8vKTj.css">
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || (!stored && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/myPortfolio/assets/index-txCV2Jda.js"></script>
+    <link rel="stylesheet" crossorigin href="/myPortfolio/assets/index-CtHR6mAc.css">
   </head>
   <body>
     <div id="root"></div>
