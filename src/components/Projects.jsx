@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import { profile, projects } from "../data/content";
-import RichText from "./RichText";
 import Section from "./Section";
 
 function Projects() {
@@ -14,9 +13,7 @@ function Projects() {
             </div>
             <div className="flex flex-1 flex-col p-5">
               <h3 className="text-[17px] font-semibold leading-snug tracking-tight text-ink">{p.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                <RichText text={p.text} />
-              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{p.text}</p>
               <div className="mt-auto flex items-center justify-between gap-3 pt-5">
                 <span className="truncate text-xs text-faint">{p.tags.join(" · ")}</span>
                 <a

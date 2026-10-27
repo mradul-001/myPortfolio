@@ -68,12 +68,11 @@ export const experience = [
   },
 ];
 
-// Key phrases wrapped in **double asterisks** are shown in bold.
 export const projects = [
   {
     title: "SCLP: A Compiler for a C-like Language",
     image: sclpImg,
-    text: "Compiler for a simplified C, built with **Lex and Yacc** for IIT Bombay's CS320. Builds the symbol table and AST, then generates **three-address code, RTL and MIPS assembly**.",
+    text: "Compiler for a simplified C, built with Lex and Yacc for IIT Bombay's CS320. Builds the symbol table and AST, then generates three-address code, RTL and MIPS assembly.",
     tags: ["Lex", "Yacc", "MIPS"],
     href: "https://www.cse.iitb.ac.in/~uday/sclp-web/",
     linkLabel: "About SCLP",
@@ -81,7 +80,7 @@ export const projects = [
   {
     title: "smPredictor: An Adaptive Stock Price Predictor",
     image: smpImg,
-    text: "An LSTM wrapped in a rolling regressor, so the model **keeps learning from each new price**. Reached an MAE of 11.96 (**about 1% error**) on live close prices across 10 NSE-listed stocks.",
+    text: "An LSTM wrapped in a rolling regressor, so the model keeps learning from each new price. Reached an MAE of 11.96 (about 1% error) on live close prices across 10 NSE-listed stocks.",
     tags: ["PyTorch", "deep-river", "Streamlit"],
     href: "https://github.com/mradul-001/smPredictor",
     linkLabel: "Code",
@@ -89,7 +88,7 @@ export const projects = [
   {
     title: "NSS App: A Volunteer Management Platform",
     image: appImg,
-    text: "App used by **450+ NSS IIT Bombay volunteers** for registration, attendance, progress tracking and events, with **role-based access** for volunteers and admins. Built by a team of four.",
+    text: "App used by 450+ NSS IIT Bombay volunteers for registration, attendance, progress tracking and events, with role-based access for volunteers and admins. Built by a team of four.",
     tags: ["Flutter", "Express", "SQL"],
     href: "https://github.com/nssiitb/nssapp",
     linkLabel: "Code",
@@ -97,16 +96,12 @@ export const projects = [
   {
     title: "myGit: A Version Control System",
     image: mygitImg,
-    text: "Git's core rebuilt in Python: **content-addressed storage with SHA-1**, a staging index, commits linked to their parent, and branches.",
+    text: "Git's core rebuilt in Python: content-addressed storage with SHA-1, a staging index, commits linked to their parent, and branches.",
     tags: ["Python", "SHA-1", "CLI"],
     href: "https://github.com/mradul-001/myGit",
     linkLabel: "Code",
   },
 ];
-
-export const about = {
-  text: "I like building clean, well-written software that follows best practices: software that makes life easier for the people who use it, and for the people who maintain it.",
-};
 
 export const achievements = [
   { title: "JEE Advanced", detail: "All India Rank 1039 among 180,000+ candidates", year: "2023" },

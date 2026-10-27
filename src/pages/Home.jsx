@@ -3,7 +3,6 @@ import Nav from "../components/Nav";
 import Intro from "../components/Intro";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
-import About from "../components/About";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
 
@@ -21,7 +20,6 @@ function Home({ scrollTo }) {
         <Intro />
         <Experience />
         <Projects />
-        <About />
         <Achievements />
       </main>
       <Contact />

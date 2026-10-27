@@ -4,9 +4,9 @@ import Section from "./Section";
 function Experience() {
   return (
     <Section id="experience" label="Featured" title="Experience">
-      <div className="space-y-10">
+      <div className="space-y-4">
         {experience.map((e) => (
-          <article key={e.company}>
+          <article key={e.company} className="rounded-xl border border-border bg-surface p-5 card-shadow sm:p-6">
             <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex items-center gap-3">
                 {e.logo ? (
