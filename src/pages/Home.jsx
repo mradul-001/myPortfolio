@@ -1,17 +1,28 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Contribution from "../components/Contribution";
-import TechStack from "../components/TechStack";
-import Footer from "../components/Footer";
+import { useEffect } from "react";
+import Nav from "../components/Nav";
+import Intro from "../components/Intro";
+import Experience from "../components/Experience";
+import Projects from "../components/Projects";
+import Achievements from "../components/Achievements";
+import Contact from "../components/Contact";
 
-function Home() {
+function Home({ scrollTo }) {
+  useEffect(() => {
+    if (!scrollTo) return;
+    document.getElementById(scrollTo)?.scrollIntoView({ behavior: "instant" });
+    window.history.replaceState(null, "", `${import.meta.env.BASE_URL}#${scrollTo}`);
+  }, [scrollTo]);
+
   return (
     <>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <Contribution></Contribution>
-      <TechStack></TechStack>
-      <Footer></Footer>
+      <Nav />
+      <main>
+        <Intro />
+        <Experience />
+        <Projects />
+        <Achievements />
+      </main>
+      <Contact />
     </>
   );
 }
